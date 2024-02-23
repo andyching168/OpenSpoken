@@ -2,6 +2,6 @@ image:
   file: .gitpod.Dockerfile
 ports:
   - port: 6080
-# tasks:
-#   - init: make init
-#     command: make run
+tasks:
+  - init: make init
+    command: make run
