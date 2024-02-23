@@ -1,4 +1,4 @@
-FROM sickcodes/docker-osx:ventura
+FROM gitpod/workspace-full-vnc:latest
 
 USER gitpod
 
@@ -15,7 +15,7 @@ USER gitpod
 # libgtk-3-dev             : for https://github.com/andlabs/ui
 # libgl1-mesa-dev, xorg-dev: for https://github.com/fyne-io/fyne
 # ---------------------------------------------------------------------
-# RUN sudo apt-get update && \
-#     sudo apt-get install -y libgtk-3-dev && \ 
-#     sudo apt-get install -y libgl1-mesa-dev xorg-dev && \
-#     sudo rm -rf /var/lib/apt/lists/*
+RUN sudo apt-get update && \
+   sudo apt-get install -y libgtk-3-dev && \ 
+   sudo apt-get install -y libgl1-mesa-dev xorg-dev && \
+   sudo rm -rf /var/lib/apt/lists/*
