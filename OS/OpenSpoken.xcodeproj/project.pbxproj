@@ -10,17 +10,30 @@
 		3666B64829708D06009C9A30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3666B64729708D06009C9A30 /* Assets.xcassets */; };
 		3666B64B29708D06009C9A30 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3666B64A29708D06009C9A30 /* Preview Assets.xcassets */; };
 		3666B65629708D89009C9A30 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666B65229708D89009C9A30 /* ContentView.swift */; };
-		3666B65729708D89009C9A30 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666B65329708D89009C9A30 /* Settings.swift */; };
 		3666B65929708D89009C9A30 /* SpeechCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666B65529708D89009C9A30 /* SpeechCore.swift */; };
 		3666B6782971A103009C9A30 /* MyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666B6772971A103009C9A30 /* MyApp.swift */; };
+		405CCA682B8C6C73002FD7C1 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666B65329708D89009C9A30 /* Settings.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		40AEE1D52B8C6A5700F6C44B /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3666B64029708D04009C9A30 /* OpenSpoken.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenSpoken.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3666B64729708D06009C9A30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3666B64A29708D06009C9A30 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3666B65229708D89009C9A30 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = OpenSpokenPlayground.swiftpm/ContentView.swift; sourceTree = SOURCE_ROOT; };
-		3666B65329708D89009C9A30 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Settings.swift; path = OpenSpokenPlayground.swiftpm/Settings.swift; sourceTree = SOURCE_ROOT; };
+		3666B65329708D89009C9A30 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Settings.swift; path = OpenSpoken/Settings.swift; sourceTree = SOURCE_ROOT; };
 		3666B65529708D89009C9A30 /* SpeechCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpeechCore.swift; path = OpenSpokenPlayground.swiftpm/SpeechCore.swift; sourceTree = SOURCE_ROOT; };
 		3666B65A29708E81009C9A30 /* OpenSpoken.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OpenSpoken.entitlements; sourceTree = "<group>"; };
 		3666B6772971A103009C9A30 /* MyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyApp.swift; sourceTree = "<group>"; };
@@ -59,8 +72,8 @@
 				3666B65A29708E81009C9A30 /* OpenSpoken.entitlements */,
 				3666B6772971A103009C9A30 /* MyApp.swift */,
 				3666B65229708D89009C9A30 /* ContentView.swift */,
-				3666B65329708D89009C9A30 /* Settings.swift */,
 				3666B65529708D89009C9A30 /* SpeechCore.swift */,
+				3666B65329708D89009C9A30 /* Settings.swift */,
 				3666B64729708D06009C9A30 /* Assets.xcassets */,
 				3666B64929708D06009C9A30 /* Preview Content */,
 			);
@@ -85,6 +98,7 @@
 				3666B63C29708D04009C9A30 /* Sources */,
 				3666B63D29708D04009C9A30 /* Frameworks */,
 				3666B63E29708D04009C9A30 /* Resources */,
+				40AEE1D52B8C6A5700F6C44B /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
@@ -104,7 +118,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1340;
+				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					3666B63F29708D04009C9A30 = {
@@ -151,8 +165,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3666B65929708D89009C9A30 /* SpeechCore.swift in Sources */,
-				3666B65729708D89009C9A30 /* Settings.swift in Sources */,
 				3666B65629708D89009C9A30 /* ContentView.swift in Sources */,
+				405CCA682B8C6C73002FD7C1 /* Settings.swift in Sources */,
 				3666B6782971A103009C9A30 /* MyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,8 +316,8 @@
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "OpenSpoken uses built-in speech recognition to transcribe audio.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -344,8 +358,8 @@
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "OpenSpoken uses built-in speech recognition to transcribe audio.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (

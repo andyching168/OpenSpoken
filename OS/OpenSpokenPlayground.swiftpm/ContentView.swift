@@ -9,7 +9,7 @@ struct ContentView: View {
     @State var shouldScroll = false
 
     var body: some View {
-            VStack() {
+            VStack(spacing: 0) {
                 
                 // 使用 VStack 分隔兩個 ScrollView
                 VStack {
@@ -25,10 +25,13 @@ struct ContentView: View {
                             .padding(.bottom) // 添加一些內邊距
 
                     Divider() // 可選的，如果您想要視覺上分隔這兩個部分
-
-                    SelectableTextView(text: $transcriber.translatedText, isEditable: true, isRunning: $transcriber.isRunning)
-                            .font(.system(size: settings.fontSize)) // 同上，需要在SelectableTextView中調整字體設置
-                            .frame(maxWidth: .infinity, alignment: .leading)
+                    if(transcriber.isTranslateEnabled)
+                    {
+                        SelectableTextView(text: $transcriber.translatedText, isEditable: true, isRunning: $transcriber.isRunning)
+                                .font(.system(size: settings.fontSize)) // 同上，需要在SelectableTextView中調整字體設置
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                    }
+                    
                 }
                 
                 .frame(maxHeight: .infinity)
@@ -60,6 +63,8 @@ struct ContentView: View {
                     .padding()
                 }
                 Spacer()
+                Toggle("Translate", isOn: $transcriber.isTranslateEnabled)
+                    .frame(width: 137.255)
                 LanguageMenu(notifyLanguageChanged: {
                     if !self.transcriber.isRunning { return }
                     self.transcriber.restart()
@@ -118,7 +123,11 @@ struct SelectableTextView: UIViewRepresentable {
             func textViewDidChange(_ textView: UITextView) {
                 parent.text = textView.text
                 // 正確地通過parent屬性訪問transcriber來調用translateText()
-                parent.transcriber.translateText()
+                if(parent.transcriber.isTranslateEnabled)
+                {
+                    parent.transcriber.translateText()
+                }
+                
             }
         }
 }

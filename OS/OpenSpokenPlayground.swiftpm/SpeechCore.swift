@@ -23,6 +23,7 @@
 
         @Published var transcribedText = "Tap the start below to begin"
         @Published var translatedText = "此處顯示翻譯後的結果"
+        @Published var isTranslateEnabled = true
 
         init() {
             // Asynchronously make the authorization request.
@@ -115,7 +116,10 @@
                 guard let result = result else { return }
                 // Update the text view with the results.
                 self.transcribedText = result.bestTranscription.formattedString
-                self.translateText()
+                if (self.isTranslateEnabled)
+                {
+                    self.translateText()
+                }
                 isFinal = result.isFinal
                 #if DEBUG
                 print(self.transcribedText)
