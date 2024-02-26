@@ -3,23 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		361F24EF2972AE710053B039 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 361F24EE2972AE710053B039 /* Launch Screen.storyboard */; };
 		3666B64829708D06009C9A30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3666B64729708D06009C9A30 /* Assets.xcassets */; };
 		3666B64B29708D06009C9A30 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3666B64A29708D06009C9A30 /* Preview Assets.xcassets */; };
 		3666B65629708D89009C9A30 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666B65229708D89009C9A30 /* ContentView.swift */; };
 		3666B65729708D89009C9A30 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666B65329708D89009C9A30 /* Settings.swift */; };
 		3666B65929708D89009C9A30 /* SpeechCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666B65529708D89009C9A30 /* SpeechCore.swift */; };
-		3666B65C29719CA8009C9A30 /* ProgressView_Polyfill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666B65B29719CA8009C9A30 /* ProgressView_Polyfill.swift */; };
 		3666B6782971A103009C9A30 /* MyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666B6772971A103009C9A30 /* MyApp.swift */; };
-		3697E484297545C200EE042B /* ScrollViewProxy in Frameworks */ = {isa = PBXBuildFile; productRef = 3697E483297545C200EE042B /* ScrollViewProxy */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		361F24EE2972AE710053B039 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		3666B64029708D04009C9A30 /* OpenSpoken.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenSpoken.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3666B64729708D06009C9A30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3666B64A29708D06009C9A30 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -27,7 +23,6 @@
 		3666B65329708D89009C9A30 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Settings.swift; path = OpenSpokenPlayground.swiftpm/Settings.swift; sourceTree = SOURCE_ROOT; };
 		3666B65529708D89009C9A30 /* SpeechCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpeechCore.swift; path = OpenSpokenPlayground.swiftpm/SpeechCore.swift; sourceTree = SOURCE_ROOT; };
 		3666B65A29708E81009C9A30 /* OpenSpoken.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OpenSpoken.entitlements; sourceTree = "<group>"; };
-		3666B65B29719CA8009C9A30 /* ProgressView_Polyfill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProgressView_Polyfill.swift; path = OpenSpokenPlayground.swiftpm/ProgressView_Polyfill.swift; sourceTree = SOURCE_ROOT; };
 		3666B6772971A103009C9A30 /* MyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -36,7 +31,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3697E484297545C200EE042B /* ScrollViewProxy in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,10 +61,8 @@
 				3666B65229708D89009C9A30 /* ContentView.swift */,
 				3666B65329708D89009C9A30 /* Settings.swift */,
 				3666B65529708D89009C9A30 /* SpeechCore.swift */,
-				3666B65B29719CA8009C9A30 /* ProgressView_Polyfill.swift */,
 				3666B64729708D06009C9A30 /* Assets.xcassets */,
 				3666B64929708D06009C9A30 /* Preview Content */,
-				361F24EE2972AE710053B039 /* Launch Screen.storyboard */,
 			);
 			path = OpenSpoken;
 			sourceTree = "<group>";
@@ -100,7 +92,6 @@
 			);
 			name = OpenSpoken;
 			packageProductDependencies = (
-				3697E483297545C200EE042B /* ScrollViewProxy */,
 			);
 			productName = OpenSpoken;
 			productReference = 3666B64029708D04009C9A30 /* OpenSpoken.app */;
@@ -114,7 +105,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1340;
-				LastUpgradeCheck = 1340;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					3666B63F29708D04009C9A30 = {
 						CreatedOnToolsVersion = 13.4.1;
@@ -123,7 +114,7 @@
 				};
 			};
 			buildConfigurationList = 3666B63B29708D04009C9A30 /* Build configuration list for PBXProject "OpenSpoken" */;
-			compatibilityVersion = "Xcode 13.0";
+			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -132,7 +123,6 @@
 			);
 			mainGroup = 3666B63729708D04009C9A30;
 			packageReferences = (
-				3697E482297545C200EE042B /* XCRemoteSwiftPackageReference "ScrollViewProxy" */,
 			);
 			productRefGroup = 3666B64129708D04009C9A30 /* Products */;
 			projectDirPath = "";
@@ -148,7 +138,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				361F24EF2972AE710053B039 /* Launch Screen.storyboard in Resources */,
 				3666B64B29708D06009C9A30 /* Preview Assets.xcassets in Resources */,
 				3666B64829708D06009C9A30 /* Assets.xcassets in Resources */,
 			);
@@ -163,7 +152,6 @@
 			files = (
 				3666B65929708D89009C9A30 /* SpeechCore.swift in Sources */,
 				3666B65729708D89009C9A30 /* Settings.swift in Sources */,
-				3666B65C29719CA8009C9A30 /* ProgressView_Polyfill.swift in Sources */,
 				3666B65629708D89009C9A30 /* ContentView.swift in Sources */,
 				3666B6782971A103009C9A30 /* MyApp.swift in Sources */,
 			);
@@ -208,6 +196,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -224,8 +213,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -271,6 +260,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -281,8 +271,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -299,28 +289,29 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = OpenSpoken/OpenSpoken.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"OpenSpoken/Preview Content\"";
-				DEVELOPMENT_TEAM = 7P7G2A8U54;
+				DEVELOPMENT_TEAM = 252SF5UH2Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OpenSpoken/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "OpenSpoken uses microphone input to transcribe and visualize audio as text.";
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "OpenSpoken uses built-in speech recognition to transcribe audio.";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.talaviram.OpenSpoken;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andyching168.OpenSpoken;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = YES;
@@ -340,28 +331,29 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = OpenSpoken/OpenSpoken.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"OpenSpoken/Preview Content\"";
-				DEVELOPMENT_TEAM = 7P7G2A8U54;
+				DEVELOPMENT_TEAM = 252SF5UH2Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = OpenSpoken/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "OpenSpoken uses microphone input to transcribe and visualize audio as text.";
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "OpenSpoken uses built-in speech recognition to transcribe audio.";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.talaviram.OpenSpoken;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andyching168.OpenSpoken;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = YES;
@@ -395,25 +387,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		3697E482297545C200EE042B /* XCRemoteSwiftPackageReference "ScrollViewProxy" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Amzd/ScrollViewProxy";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		3697E483297545C200EE042B /* ScrollViewProxy */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3697E482297545C200EE042B /* XCRemoteSwiftPackageReference "ScrollViewProxy" */;
-			productName = ScrollViewProxy;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3666B63829708D04009C9A30 /* Project object */;
 }

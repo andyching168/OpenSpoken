@@ -2,6 +2,31 @@ import Speech
 import SwiftUI
 
 class Settings: ObservableObject {
+        
+    @Published var translateLanguage: String = "en" // 將預設語言設為英語
+        
+    // 語言代碼到語言名稱的映射
+    let languageNames: [String: String] = [
+        "en": "English",
+        "zh_tw": "中文(台灣)",
+        "fr": "French",
+        // 更多語言代碼和名稱...
+    ]
+    
+    func getTranslateLanguageAsText() -> String {
+            // 如果translateLanguage在字典中，直接返回對應的名稱
+            if let languageName = languageNames[translateLanguage] {
+                return languageName
+            } else {
+                // 嘗試從Locale構造一個更通用的語言名稱
+                let locale = Locale(identifier: translateLanguage)
+                if let languageCode = locale.languageCode, let displayName = Locale.current.localizedString(forLanguageCode: languageCode) {
+                    return displayName
+                }
+            }
+            // 如果以上方法都無法獲取語言名稱，返回一個預設值
+            return "Unknown Language"
+        }
     @Published var fontSize: CGFloat = 40.0 {
         didSet {
             UserDefaults.standard.set(fontSize, forKey: "fontSize")
@@ -100,6 +125,57 @@ private func getLocaleString(_ locale: Locale) -> String {
         return "\(language) (\(country))"
     }
 }
+struct TranslationLanguageView: View {
+    var onLanguageSelected: (String) -> Void
+    var onDismiss: () -> Void
+    @State private var isVisible = false
+    @ObservedObject private var settings = Settings.instance
+    var selectedLanguage: String
+
+    // 假設的翻譯語言列表
+    let languages = [
+        ("English", "en"),
+        ("中文(台灣)", "zh_tw"),
+        ("French", "fr"),
+        // 添加更多支持的語言
+    ]
+
+    var body: some View {
+        Button(settings.getTranslateLanguageAsText(), action: { isVisible = true })
+            .sheet(isPresented: $isVisible) {
+                NavigationView {
+                    List(languages, id: \.1) { language in
+                        Button(action: {
+                            self.onLanguageSelected(language.1)
+                            self.isVisible = false
+                        }) {
+                            HStack {
+                                Text(language.0)
+                                Spacer()
+                                if selectedLanguage == language.1 {
+                                    Image(systemName: "checkmark")
+                                }
+                            }
+                        }
+                    }
+                    .navigationBarTitle(Text("Select Translation Language"), displayMode: .inline)
+                    .navigationBarItems(trailing: Button("Done") {
+                        self.onDismiss()
+                        self.isVisible = false
+                    })
+                }
+            }
+    }
+    
+    // 初始化方法現在包括了所有提供的參數
+    init(selectedLanguage: String, onLanguageSelected: @escaping (String) -> Void, onDismiss: @escaping () -> Void) {
+        self.selectedLanguage = selectedLanguage
+        self.onLanguageSelected = onLanguageSelected
+        self.onDismiss = onDismiss
+    }
+}
+
+
 
 struct LanguageView: View {
     let onLanguageSelected: (_ language: String?) -> Void
